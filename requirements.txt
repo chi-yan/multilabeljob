@@ -3,3 +3,4 @@ tensorflow
 streamlit
 scikit-multilearn
 scikit-learn
+scipy
