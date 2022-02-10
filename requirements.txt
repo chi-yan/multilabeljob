@@ -2,3 +2,4 @@ tensorflow_hub
 tensorflow
 streamlit
 scikit-multilearn
+scikit-learn
