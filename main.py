@@ -34,4 +34,4 @@ if sentence:
     st.markdown(sentence)
     x_test = embed([sentence])
     y_new_prediction = classifier.predict(x_test)
-    print(d[y_new_prediction.todense()[0].tolist()[0][0]])
+    st.markdown(d[y_new_prediction.todense()[0].tolist()[0][0]])
