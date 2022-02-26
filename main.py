@@ -28,7 +28,13 @@ d = {0: 'Accounting', 1: 'Administration & Office Support', 2: 'Advertising, Art
 categories = list(d.values())
     
 st.markdown(f"""<h1>Job Category Predictor</h1><br>A famous job website has 30 categories: <br>{categories}<br><br>""", unsafe_allow_html=True)
-sentence = st.text_input('Input job description here: ')
+#sentence = st.text_input('Input job description here: ')
+sentence = st.multiselect(
+     'Input job description here: ',
+     ['You need to get good at React and Javascript', 
+      'Administer medication and treatments to patients', 
+      'Good interpersonal skills and able to build and manage strong customer relationships', 
+      'Experience with commercial gas fitting and maintenance of LPG appliances'])
 
 if sentence:
     x_test = embed([sentence])
