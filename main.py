@@ -28,3 +28,6 @@ classifier = load_classifier()
     
 st.markdown("""Test""", unsafe_allow_html=True)
 sentence = st.text_input('Input job description here: ')
+
+if sentence:
+    st.markdown(sentence)
