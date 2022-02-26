@@ -39,8 +39,7 @@ https://data.world/promptcloud/30000-job-postings-from-seek-australia
 
 sentence = st.text_area('Input job description here: ', value='You need to get good at algorithms, React and Javascript')
 
-
-if sentence:
+if st.button('Convert description to job category'):
     x_test = embed([sentence])
     y_new_prediction = classifier.predict(x_test)
     st.markdown(d[y_new_prediction.todense()[0].tolist()[0][0]])
