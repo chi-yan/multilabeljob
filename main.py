@@ -21,9 +21,15 @@ def load_classifier():
         classifier = pickle.load(fp)
     return classifier
 
+def makePrediction(text):
+  x_test = embed(text)
+  y_new_prediction = classifier.predict(x_test)
+  return(d[y_new_prediction.todense()[0].tolist()[0][0]])
+
 embed = load_hub()
 classifier = load_classifier()
 
+d = {0: 'Accounting', 1: 'Administration & Office Support', 2: 'Advertising, Arts & Media', 3: 'Banking & Financial Services', 4: 'CEO & General Management', 5: 'Call Centre & Customer Service', 6: 'Community Services & Development', 7: 'Construction', 8: 'Consulting & Strategy', 9: 'Design & Architecture', 10: 'Education & Training', 11: 'Engineering', 12: 'Farming, Animals & Conservation', 13: 'Government & Defence', 14: 'Healthcare & Medical', 15: 'Hospitality & Tourism', 16: 'Human Resources & Recruitment', 17: 'Information & Communication Technology', 18: 'Insurance & Superannuation', 19: 'Legal', 20: 'Manufacturing, Transport & Logistics', 21: 'Marketing & Communications', 22: 'Mining, Resources & Energy', 23: 'Real Estate & Property', 24: 'Retail & Consumer Products', 25: 'Sales', 26: 'Science & Technology', 27: 'Self Employment', 28: 'Sport & Recreation', 29: 'Trades & Services'}
 
     
 st.markdown("""Test""", unsafe_allow_html=True)
