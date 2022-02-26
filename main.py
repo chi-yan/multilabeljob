@@ -19,7 +19,7 @@ def load_classifier():
     print('2')
     with open('classifier.pkl', 'rb') as fp:
         classifier = pickle.load(fp)
-    return embeddings
+    return classifier
 
 embed = load_hub()
 classifier = load_classifier()
