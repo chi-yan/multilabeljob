@@ -35,7 +35,7 @@ A famous job website has 30 categories:
 Training data is from 
 <a href="https://data.world/promptcloud/30000-job-postings-from-seek-australia">
 https://data.world/promptcloud/30000-job-postings-from-seek-australia
-</a><br>""", unsafe_allow_html=True)
+</a><br><br>""", unsafe_allow_html=True)
 
 sentence = st.text_area('Input job description here: ', value='You need to get good at algorithms, React and Javascript')
 
