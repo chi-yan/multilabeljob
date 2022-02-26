@@ -5,6 +5,7 @@ import pickle
 import numpy as np
 import pandas as pd
 from skmultilearn.problem_transform import BinaryRelevance
+import os
 
 @st.cache
 def load_hub():
@@ -13,7 +14,8 @@ def load_hub():
 @st.cache
 def load_classifier():
     print('1')
-    urllib.request.urlretrieve("https://www.dropbox.com/s/144rw3sur8lyo53/classifier.pkl?dl=0", "classifier.pkl") #too big to upload to Github
+    os.system('wget -O classifier.pkl.gz https://github.com/chi-yan/notebooks/blob/master/classifier.pkl.gz?raw=true')
+    os.system('gunzip classifier.pkl.gz')  
     print('2')
     with open('classifier.pkl', 'rb') as fp:
         classifier = pickle.load(fp)
