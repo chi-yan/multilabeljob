@@ -17,7 +17,7 @@ def load_classifier():
     return embeddings
 
 embed = load_hub()
-classifier = load_classifer()
+classifier = load_classifier()
 
 
     
