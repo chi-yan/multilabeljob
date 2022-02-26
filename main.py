@@ -31,7 +31,6 @@ st.markdown(f"""<h1>Job Category Predictor</h1><br>A famous job website has 30 c
 sentence = st.text_input('Input job description here: ')
 
 if sentence:
-    st.markdown(sentence)
     x_test = embed([sentence])
     y_new_prediction = classifier.predict(x_test)
     st.markdown(d[y_new_prediction.todense()[0].tolist()[0][0]])
