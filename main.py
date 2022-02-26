@@ -1,5 +1,6 @@
 import tensorflow_hub as hub
 import streamlit as st
+import urllib.request
 
 import numpy as np
 import pandas as pd
