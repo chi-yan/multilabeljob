@@ -11,7 +11,9 @@ def load_hub():
 
 @st.cache
 def load_classifier():
+    print('1')
     urllib.request.urlretrieve("https://www.dropbox.com/s/144rw3sur8lyo53/classifier.pkl?dl=0", "classifier.pkl") #too big to upload to Github
+    print('2')
     with open('classifier.pkl', 'rb') as fp:
         classifier = pickle.load(fp)
     return embeddings
