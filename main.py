@@ -21,11 +21,6 @@ def load_classifier():
         classifier = pickle.load(fp)
     return classifier
 
-def makePrediction(text):
-  x_test = embed(text)
-  y_new_prediction = classifier.predict(x_test)
-  return(d[y_new_prediction.todense()[0].tolist()[0][0]])
-
 embed = load_hub()
 classifier = load_classifier()
 
@@ -37,3 +32,6 @@ sentence = st.text_input('Input job description here: ')
 
 if sentence:
     st.markdown(sentence)
+    x_test = embed(sentence)
+    y_new_prediction = classifier.predict(x_test)
+    print(d[y_new_prediction.todense()[0].tolist()[0][0]])
